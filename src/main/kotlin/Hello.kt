@@ -1,5 +1,7 @@
 package hello
 import khttp.get
+import java.io.FileInputStream
+import java.util.*
 
 fun getHelloString() : String {
     return "Hello, world!"
@@ -8,7 +10,12 @@ fun getHelloString() : String {
 fun main(args : Array<String>) {
     println(getHelloString())
 
-    val r = get("http://worldtimeapi.org/api/ip")
-    println(r.text)
+    getTimeJsonString()
+}
+
+fun getTimeJsonString(): String {
+    val props = Properties()
+    props.load(FileInputStream("mockserver.properties"))
+    return get(props.getProperty("timeApiUrl")).text
 }
 
