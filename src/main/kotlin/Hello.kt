@@ -3,6 +3,9 @@ import khttp.get
 import java.io.FileInputStream
 import java.util.*
 
+//TODO CONVERT THIS APP TO RUN IN DOCKER
+//https://www.mock-server.com/mock_server/running_mock_server.html#docker_container
+
 fun main(args : Array<String>) {
     println(getCurrentUnixTime())
 }
