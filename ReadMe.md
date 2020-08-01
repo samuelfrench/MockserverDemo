@@ -28,3 +28,10 @@ Once you compiled the sources with previous 'mvn test' command, you can run the 
 If you want to modify the main method in Hello.kt in order to use commandline arguments, you can specify them on commandline as:
 
 	mvn exec:java -Dexec.args="argument1"
+
+## ADDED BY SF
+
+To run via command line:
+
+    mvn clean package
+    java -jar target/mockserver-demo-1.0-SNAPSHOT-jar-with-dependencies.jar
