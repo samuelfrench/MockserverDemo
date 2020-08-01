@@ -35,3 +35,9 @@ To run via command line:
 
     mvn clean package
     java -jar target/mockserver-demo-1.0-SNAPSHOT-jar-with-dependencies.jar
+
+with docker:
+    
+    mvn clean package
+    docker build --tag mockserverdemo:1.0 .
+    docker run mockserverdemo:1.0
