@@ -41,3 +41,9 @@ with docker:
     mvn clean package
     docker build --tag mockserverdemo:1.0 .
     docker run mockserverdemo:1.0
+    
+with docker-compose:
+    
+    mvn clean package
+    docker-compose build
+    docker-compose up
