@@ -3,7 +3,7 @@ import khttp.get
 import java.io.FileInputStream
 import java.util.*
 
-//TODO NEXT STEP: Add in mockserver container to work with current docker flow
+//TODO NEXT STEP: convert docker to be using docker compose
 //https://www.mock-server.com/mock_server/running_mock_server.html#docker_container
 
 fun main(args : Array<String>) {
