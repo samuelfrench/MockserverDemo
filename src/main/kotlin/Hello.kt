@@ -12,7 +12,7 @@ fun main(args : Array<String>) {
 
 fun getCurrentUnixTime(): Long {
     val props = Properties()
-    props.load(FileInputStream("mockserver.properties"))
+    props.load(FileInputStream("mockserverdemo.properties"))
     return get(props.getProperty("timeApiUrl")).jsonObject.getLong("unixtime")
 }
 
