@@ -1,2 +1,15 @@
-app:
-  build: .
+version: "3.8"
+services:
+  app:
+    build: .
+  mockServer:
+    image: mockserver/mockserver:mockserver-5.11.1
+    ports:
+      - 1080:1080
+    environment:
+      MOCKSERVER_PROPERTY_FILE: /config/mockserver.properties
+      MOCKSERVER_INITIALIZATION_JSON_PATH: /config/mockserverconfig.json
+    volumes:
+      - type: bind
+        source: .
+        target: /config
