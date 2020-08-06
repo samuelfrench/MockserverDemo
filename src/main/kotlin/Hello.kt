@@ -9,10 +9,6 @@ fun main(args : Array<String>) {
     app.get("/") { ctx -> ctx.result(getCurrentUnixTime().toString()) }
 }
 
-private fun waitForMockserverToStartUp() {
-    Thread.sleep(5000);
-}
-
 private fun getCurrentUnixTime(): Long {
     val props = Properties()
     props.load(FileInputStream("mockserverdemo.properties"))
